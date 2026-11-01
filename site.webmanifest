@@ -1,0 +1,12 @@
+{
+  "name": "Buffet Magic Star",
+  "short_name": "Magic Star",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#13205c",
+  "theme_color": "#13205c",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

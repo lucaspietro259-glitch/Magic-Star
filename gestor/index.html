@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Área do Gestor | Buffet Magic Star</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/gestor.css">
+</head>
+<body class="auth-page">
+  <main class="auth">
+    <section class="auth__side" aria-hidden="true">
+      <img src="../assets/img/salao-playground-1280.webp" alt="">
+      <div class="auth__side-copy">
+        <span class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 1.8l2.9 6.5 7.1.7-5.3 4.8 1.5 7-6.2-3.6-6.2 3.6 1.5-7L2 9l7.1-.7z"/></svg></span>
+        <p>Do primeiro contato ao parabéns, tudo do buffet num só lugar.</p>
+      </div>
+    </section>
+
+    <section class="auth__panel">
+      <div class="auth__box">
+        <a class="auth__brand" href="../">Buffet <strong>Magic Star</strong></a>
+        <h1 data-title>Área do Gestor</h1>
+        <p class="auth__sub" data-sub>Entre com seu e-mail e senha.</p>
+        <div class="auth__msg" data-msg hidden></div>
+
+        <!-- Entrar -->
+        <form class="stack" data-form="login" novalidate>
+          <div class="field"><label for="l-email">E-mail</label><input id="l-email" name="email" type="email" autocomplete="username" required></div>
+          <div class="field"><label for="l-pass">Senha</label><input id="l-pass" name="password" type="password" autocomplete="current-password" required></div>
+          <button class="btn btn--primary btn--lg" type="submit">Entrar</button>
+          <div class="auth__links"><button type="button" class="link" data-go="forgot">Esqueci minha senha</button><button type="button" class="link" data-go="signup">Solicitar acesso</button></div>
+        </form>
+
+        <!-- Solicitar acesso -->
+        <form class="stack" data-form="signup" novalidate hidden>
+          <div class="field"><label for="s-name">Nome completo</label><input id="s-name" name="full_name" autocomplete="name" required></div>
+          <div class="field"><label for="s-email">E-mail</label><input id="s-email" name="email" type="email" autocomplete="username" required></div>
+          <div class="field"><label for="s-pass">Senha</label><input id="s-pass" name="password" type="password" autocomplete="new-password" minlength="8" required><span class="field__hint">Mínimo de 8 caracteres.</span></div>
+          <button class="btn btn--primary btn--lg" type="submit">Criar conta</button>
+          <p class="auth__note">A primeira conta criada vira administradora. As seguintes aguardam a liberação de um administrador.</p>
+          <div class="auth__links"><button type="button" class="link" data-go="login">Já tenho conta</button></div>
+        </form>
+
+        <!-- Esqueci a senha -->
+        <form class="stack" data-form="forgot" novalidate hidden>
+          <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="username" required></div>
+          <button class="btn btn--primary btn--lg" type="submit">Enviar link de recuperação</button>
+          <div class="auth__links"><button type="button" class="link" data-go="login">Voltar para o login</button></div>
+        </form>
+
+        <!-- Nova senha (chega pelo link do e-mail) -->
+        <form class="stack" data-form="reset" novalidate hidden>
+          <div class="field"><label for="r-pass">Nova senha</label><input id="r-pass" name="password" type="password" autocomplete="new-password" minlength="8" required></div>
+          <div class="field"><label for="r-pass2">Repita a nova senha</label><input id="r-pass2" name="password2" type="password" autocomplete="new-password" minlength="8" required></div>
+          <button class="btn btn--primary btn--lg" type="submit">Salvar nova senha</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="assets/js/login.js"></script>
+</body>
+</html>

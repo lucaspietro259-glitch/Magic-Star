@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel | Buffet Magic Star</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/gestor.css">
+  <link rel="stylesheet" href="assets/proposal.css">
+</head>
+<body class="app-page">
+  <div class="boot" data-boot><span class="spinner"></span></div>
+  <div class="app" hidden data-app>
+    <aside class="side" data-side>
+      <a class="side__brand" href="#/">
+        <span class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 1.8l2.9 6.5 7.1.7-5.3 4.8 1.5 7-6.2-3.6-6.2 3.6 1.5-7L2 9l7.1-.7z"/></svg></span>
+        <span><small>Buffet</small>Magic Star</span>
+      </a>
+      <nav class="side__nav" data-nav aria-label="Menu do painel"></nav>
+      <div class="side__foot">
+        <a class="side__site" href="../" target="_blank" rel="noopener">Ver o site</a>
+      </div>
+    </aside>
+    <div class="side-back" data-side-back></div>
+
+    <div class="main">
+      <header class="top">
+        <button class="icon-btn top__menu" type="button" data-menu aria-label="Abrir menu"></button>
+        <h1 class="top__title" data-title>Visão geral</h1>
+        <div class="top__actions">
+          <a class="btn btn--primary btn--sm" href="#/orcamentos/novo" data-new-quote></a>
+          <div class="user" data-user></div>
+        </div>
+      </header>
+      <main class="view" id="view" data-view tabindex="-1"></main>
+    </div>
+  </div>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
