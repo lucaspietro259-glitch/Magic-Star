@@ -30,7 +30,7 @@ addEventListener('resize', () => requestAnimationFrame(runScroll));
 
 /* ---------- Configuração ---------- */
 function applyConfig() {
-  $$('[data-wa]').forEach((a) => (a.href = waLink()));
+  $$('[data-wa]').forEach((a) => (a.href = waLink(a.dataset.waMsg || undefined)));
   if (SITE.hours) $$('[data-hours]').forEach((el) => (el.textContent = SITE.hours));
   $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
 }

@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/fachada-vagao-palhaco-1280.webp" imagesrcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w, assets/img/fachada-vagao-palhaco-1920.webp 1920w" imagesizes="(max-width: 860px) 100vw, 60vw" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/playground-toboga-1280.webp" imagesrcset="assets/img/playground-toboga-640.webp 480w, assets/img/playground-toboga-1280.webp 960w" imagesizes="(max-width: 860px) 92vw, 46vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -83,6 +83,8 @@
     <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
     <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2zM4 16c2 1.5 4-1.5 6 0s4 1.5 6 0 3-1 4 0M12 11V7"/><path d="M12 3.5c1 1 1 2 0 3-1-1-1-2 0-3z"/></g></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2.5L9 4h6l1.5 2H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <!-- vagão da fachada, usado no trilho do "Como funciona" -->
     <symbol id="i-wagon" viewBox="0 0 64 40"><path fill="#ee3b33" d="M6 12c0-5 4-9 9-9h30c8 0 15 6 15 14v8c0 3-2 5-5 5H11c-3 0-5-2-5-5z"/><path fill="#fff" opacity=".92" d="M14 8h10v10H12v-8c0-1 1-2 2-2zM28 8h11v10H28zM43 8h4c5 0 8 4 8 9v1H43z"/><path fill="#ffd028" d="M6 22h54v3H6z"/><circle cx="17" cy="33" r="5" fill="#10224f"/><circle cx="47" cy="33" r="5" fill="#10224f"/><circle cx="17" cy="33" r="2" fill="#fff"/><circle cx="47" cy="33" r="2" fill="#fff"/></symbol>
@@ -127,31 +129,42 @@
 
 <main id="conteudo">
 
-<!-- ========== 1. INÍCIO ========== -->
+<!-- ========== 1. INÍCIO ==========
+     A "janela": foto real dos brinquedos com a moldura amarela das janelas da fachada,
+     sobre o azul da fachada. O "ingresso" destaca os 17 brinquedos. -->
 <section class="hero" id="inicio" aria-labelledby="hero-title">
-  <div class="hero__copy">
-    <div class="hero__copy-inner">
-      <p class="hero__kicker">Buffet infantil em São Caetano do Sul</p>
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="hero__kicker">Buffet infantil no Barcelona, São Caetano do Sul</p>
       <h1 class="hero__title" id="hero-title">Mais do que uma festa, uma memória que seu filho vai levar para a vida.</h1>
-      <p class="hero__sub">Um espaço preparado para transformar momentos especiais em celebrações inesquecíveis para toda a família.</p>
+      <p class="hero__sub">Um espaço com 17 brinquedos e festa completa, com bebida, comida, bolo e decoração, preparado para celebrar com toda a família.</p>
       <div class="hero__ctas">
-        <a class="btn" href="#orcamento">QUERO FAZER MINHA FESTA</a>
-        <a class="btn btn--light" href="#espaco">CONHEÇA NOSSO ESPAÇO</a>
+        <a class="btn btn--hero" href="https://wa.me/5511945310974" data-wa data-wa-msg="Olá! Vi o site do Buffet Magic Star e quero um orçamento para a festa do meu filho." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Pedir orçamento no WhatsApp</a>
+        <a class="hero__link" href="#atracoes">Ver os 17 brinquedos<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
+
+    <div class="hero__window">
+      <figure class="hero__frame">
+        <img src="assets/img/playground-toboga-1280.webp" srcset="assets/img/playground-toboga-640.webp 480w, assets/img/playground-toboga-1280.webp 960w" sizes="(max-width: 860px) 92vw, 46vw" width="960" height="1440" decoding="async" fetchpriority="high" alt="Playground de vários andares do Buffet Magic Star, com tobogã verde e piscina de bolinhas">
+        <figcaption><svg aria-hidden="true"><use href="#i-camera"/></svg>Foto real do nosso playground</figcaption>
+      </figure>
+      <a class="hero__ticket" href="#atracoes" aria-label="Ver os 17 brinquedos e atrações">
+        <strong>17</strong>
+        <span class="hero__ticket-txt">brinquedos<br>e atrações</span>
+        <span class="hero__thumbs" aria-hidden="true">
+          <img src="assets/img/piscina-bolinhas-1280.webp" srcset="assets/img/piscina-bolinhas-640.webp 480w, assets/img/piscina-bolinhas-1280.webp 960w" sizes="48px" width="960" height="1440" decoding="async" loading="lazy" alt="">
+          <img src="assets/img/gira-gira-maca-1280.webp" srcset="assets/img/gira-gira-maca-640.webp 640w, assets/img/gira-gira-maca-1280.webp 1280w" sizes="48px" width="1280" height="853" decoding="async" loading="lazy" alt="">
+          <img src="assets/img/tombo-legal-1280.webp" srcset="assets/img/tombo-legal-640.webp 480w, assets/img/tombo-legal-1280.webp 960w" sizes="48px" width="960" height="1440" decoding="async" loading="lazy" alt="">
+        </span>
+      </a>
+    </div>
   </div>
-  <figure class="hero__photo">
-    <img src="assets/img/fachada-vagao-palhaco-1280.webp"
-         srcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w, assets/img/fachada-vagao-palhaco-1920.webp 1920w"
-         sizes="(max-width: 860px) 100vw, 60vw" width="1920" height="1280" fetchpriority="high" decoding="async"
-         alt="Fachada azul e amarela do Buffet Magic Star, com o palhaço e o vagão no alto do prédio">
-    <figcaption>Nossa fachada na Rua Oriente, 931</figcaption>
-  </figure>
-  <ul class="hero__facts">
-    <li><span>Endereço</span><strong>Rua Oriente, 931 · Barcelona</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Oriente+931+Barcelona+S%C3%A3o+Caetano+do+Sul+SP" target="_blank" rel="noopener">Como chegar</a></li>
-    <li><span>Diversão</span><strong>17 brinquedos e atrações</strong><a href="#atracoes">Ver todos</a></li>
-    <li><span>Festa completa</span><strong>Bebida, comida, bolo e decoração</strong><a href="#o-buffet">O que inclui</a></li>
-    <li><span>Atendimento</span><strong>(11) 94531-0974</strong><a href="https://wa.me/5511945310974" data-wa target="_blank" rel="noopener">Chamar no WhatsApp</a></li>
+
+  <ul class="hero__trust">
+    <li><svg aria-hidden="true"><use href="#i-cake"/></svg><span><strong>Tudo incluso:</strong> bebida, comida, bolo e decoração</span></li>
+    <li><svg aria-hidden="true"><use href="#i-pin"/></svg><span>Rua Oriente, 931, Barcelona · <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Oriente+931+Barcelona+S%C3%A3o+Caetano+do+Sul+SP" target="_blank" rel="noopener">Como chegar</a></span></li>
+    <li><svg aria-hidden="true"><use href="#i-ig"/></svg><span>Festas reais no <a href="https://www.instagram.com/buffetmagicstar/" target="_blank" rel="noopener">@buffetmagicstar</a></span></li>
   </ul>
 </section>
 
