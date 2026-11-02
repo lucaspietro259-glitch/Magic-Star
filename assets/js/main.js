@@ -514,17 +514,19 @@ function initForm() {
     const d = Object.fromEntries(new FormData(form));
     const [y, m, dd] = d.data.split('-');
     const idade = form.elements.idade.selectedOptions[0].textContent;
+    // Sem emojis: o WhatsApp no computador troca vários deles por "�" quando chegam pelo link
+    const nome = (t) => t.trim().replace(/\s+/g, ' ').replace(/(^|\s)(\p{Ll})/gu, (_, a, b) => a + b.toUpperCase());
+    const semana = new Date(+y, +m - 1, +dd).toLocaleDateString('pt-BR', { weekday: 'long' });
     const lines = [
-      '*Pedido de orçamento — site Buffet Magic Star*',
+      `Olá! Sou ${nome(d.pais)} e vim pelo site. Quero um orçamento para festa no Buffet Magic Star.`,
       '',
-      `👤 *Responsável:* ${d.pais.trim()}`,
-      `📱 *WhatsApp:* ${d.whatsapp}`,
-      `🎂 *Aniversariante:* ${d.crianca.trim()}`,
-      `🎈 *Idade que vai completar:* ${idade}`,
-      `📅 *Data desejada:* ${dd}/${m}/${y}`,
-      `👨‍👩‍👧 *Convidados (aprox.):* ${d.convidados}`,
+      `*Aniversariante:* ${nome(d.crianca)}, vai fazer ${idade}`,
+      `*Data:* ${semana}, ${dd}/${m}/${y}`,
+      `*Convidados:* cerca de ${d.convidados}`,
+      `*Meu WhatsApp:* ${d.whatsapp}`,
     ];
-    if (d.mensagem.trim()) lines.push('', `💬 *Mensagem:* ${d.mensagem.trim()}`);
+    if (d.mensagem.trim()) lines.push('', `*Observações:* ${d.mensagem.trim()}`);
+    lines.push('', 'Pode me passar valores e se a data está disponível?');
     const url = waLink(lines.join('\n'));
     // Sem 'noopener' nas features: com ele o navegador retorna null e não dá para detectar bloqueio de pop-up
     const win = window.open(url, '_blank');
