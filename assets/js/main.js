@@ -235,23 +235,32 @@ function initSpaces() {
 
 /* ---------- Festa: stories ---------- */
 const STORY = [
-  { title: 'Chegada', items: [
+  { title: 'Chegada', cover: 'capa-chegada', items: [
     ['entrada-tapete-vermelho', 'Tapete vermelho e balões esperando os convidados.'],
     ['entrada-colunas-baloes', 'As cores do tema já na porta.'],
-    ['letras-nome-aniversariante', 'O nome do aniversariante bem na entrada.'] ] },
-  { title: 'Decoração', items: [
+    ['salao-mesa-decorada', 'O salão pronto, com a mesa do bolo ao fundo.'] ] },
+  { title: 'Decoração', cover: 'capa-decoracao', items: [
     ['palco-mesa-bolo', 'O palco do parabéns montado com o tema escolhido.'],
-    ['mesa-decorada-tema', 'Cada detalhe da mesa conversa com o tema.'],
-    ['centro-mesa', 'Centros de mesa para os convidados.'] ] },
-  { title: 'Parabéns', items: [
+    ['mesa-decorada-detalhes', 'Os personagens do tema em cada cantinho da mesa.'],
+    ['mesa-decorada-bolo-fake', 'Detalhes que viram foto.'],
+    ['centro-mesa-detalhe', 'Centro de mesa com balões para os convidados.'] ] },
+  { title: 'Brincadeira', cover: 'capa-brincadeira', items: [
+    ['playground-toboga', 'O playground de vários andares, liberado para a criançada.'],
+    ['toboga-piscina-bolinhas', 'Descida pelo tobogã direto nas bolinhas.'],
+    ['tombo-legal', 'Sobe a escada e tchibum no Tombo Legal.'],
+    ['piscina-bolinhas', 'Piscina de bolinhas para mergulhar nas cores.'] ] },
+  { title: 'Parabéns', cover: 'capa-parabens', items: [
     ['bolo-tema', 'O bolo, no centro de tudo.'],
+    ['bolo-detalhe', 'Topo personalizado com a idade do aniversariante.'],
     ['doces-personalizados', 'Doces personalizados com o tema.'],
-    ['doces-tema', 'Docinhos decorados um a um.'] ] },
-  { title: 'Comes e bebes', items: [
+    ['doces-mesa', 'Docinhos decorados um a um.'] ] },
+  { title: 'Comes e bebes', cover: 'capa-comes', items: [
     ['salgados-mesa', 'Salgados servidos à mesa.'],
+    ['salgados-detalhe', 'Coxinha, bolinha de queijo e quibe, quentinhos.'],
     ['bebidas-copos', 'Refrigerante e suco para a criançada.'],
-    ['estacao-cafe', 'Estação de café para os adultos.'] ] },
-  { title: 'Lembrancinhas', items: [
+    ['bar-bebidas', 'E bebida gelada para os adultos.'] ] },
+  { title: 'Lembrancinhas', cover: 'capa-lembrancinhas', items: [
+    ['convite-mesa', 'Cartão personalizado em cada mesa.'],
     ['lembrancinhas', 'Uma lembrancinha para cada convidado levar.'],
     ['recepcao', 'Tudo organizado na recepção, na saída.'] ] },
 ];
@@ -271,7 +280,8 @@ function initStory() {
     const li = document.createElement('li');
     const b = document.createElement('button');
     b.type = 'button';
-    const thumb = new Image(); thumb.src = imgUrl(ch.items[0][0], 640); thumb.alt = ''; thumb.loading = 'lazy';
+    // Capa: recorte quadrado de um detalhe da foto (assets/img/capa-*.webp)
+    const thumb = new Image(); thumb.src = ch.cover ? `assets/img/${ch.cover}.webp` : imgUrl(ch.items[0][0], 640); thumb.alt = ''; thumb.loading = 'lazy'; thumb.width = 160; thumb.height = 160;
     b.append(thumb, ch.title);
     b.addEventListener('click', () => go(k, 0));
     li.append(b); chaptersEl.append(li);

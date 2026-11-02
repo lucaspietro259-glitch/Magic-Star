@@ -281,7 +281,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .chapters button { width: 100%; display: flex; align-items: center; gap: 14px; padding: 12px 16px; border: 0; border-radius: 16px; background: transparent; text-align: left; font-weight: 600; font-size: 1.05rem; transition: background 0.3s; }
 .chapters button:hover { background: #fff; }
 .chapters button[aria-current='true'] { background: #fff; box-shadow: 0 10px 24px -16px rgba(16, 34, 79, 0.5); }
-.chapters img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--linha); }
+.chapters img { width: 46px; height: 46px; flex: none; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px #fff, 0 0 0 5.5px var(--sol); transition: box-shadow 0.3s; }
 .chapters button[aria-current='true'] img { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--cereja); }
 
 .story { position: relative; aspect-ratio: 9 / 16; max-height: 82vh; width: 100%; border-radius: 26px; border: 9px solid var(--sol); overflow: hidden; background: var(--tinta); box-shadow: 0 50px 90px -40px rgba(16, 34, 79, 0.7); justify-self: center; user-select: none; -webkit-user-select: none; }
@@ -504,8 +504,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .story { width: min(100%, 400px); max-height: none; order: 3; }
   .chapters { order: 2; display: flex; gap: 4px; margin: 4px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter); overflow-x: auto; scrollbar-width: none; max-width: none; }
   .chapters::-webkit-scrollbar { display: none; }
-  .chapters li { flex: 0 0 86px; }
-  .chapters button { flex-direction: column; padding: 8px 2px; font-size: 0.76rem; line-height: 1.2; gap: 6px; text-align: center; }
+  .chapters li { flex: 0 0 auto; min-width: 86px; }
+  .chapters button { flex-direction: column; padding: 8px 8px; font-size: 0.8rem; line-height: 1.2; gap: 8px; text-align: center; white-space: nowrap; }
   .chapters img { width: 56px; height: 56px; }
   .party .btn--ig { order: 4; justify-self: start; }
 
