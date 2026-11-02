@@ -566,3 +566,4 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .spaces__sticky { position: static; height: auto; padding-block: 100px; }
   .spaces__track { overflow-x: auto; transform: none !important; }
 }
+[tabindex="-1"]:focus { outline: none; }

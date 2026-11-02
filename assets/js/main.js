@@ -35,6 +35,27 @@ function applyConfig() {
   $$('[data-year]').forEach((el) => (el.textContent = new Date().getFullYear()));
 }
 
+/* ---------- Links internos sem "#" no endereço ----------
+   Assim o link copiado da barra do navegador é sempre o da página inicial,
+   e quem recebe o link não cai no meio do site. */
+function initAnchors() {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  // Link compartilhado sempre abre no topo, mesmo que tenha vindo com #seção
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  scrollTo(0, 0);
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey) return;
+    const id = a.getAttribute('href').slice(1);
+    const target = id ? document.getElementById(id) : null;
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
+    target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+  });
+}
+
 /* ---------- Cabeçalho, menu e barra do celular ---------- */
 function initHeader() {
   const header = $('.header');
@@ -540,6 +561,7 @@ async function saveLead(lead) {
 }
 
 applyConfig();
+initAnchors();
 initHeader();
 initReveal();
 initStatement();

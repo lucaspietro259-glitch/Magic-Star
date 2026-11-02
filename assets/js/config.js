@@ -6,7 +6,7 @@
    ========================================================================== */
 export const SITE = {
   name: 'Buffet Magic Star',
-  url: 'https://www.buffetmagicstar.com.br', // A CONFIRMAR: domínio definitivo
+  url: 'https://magic-star-lemon.vercel.app', // A CONFIRMAR: domínio definitivo
 
   // WhatsApp: apenas números, com DDI 55 + DDD. Usado no formulário e nos botões.
   whatsapp: '5511945310974',
