@@ -148,6 +148,7 @@ const lightbox = (() => {
 /* ---------- O buffet: frase que acende palavra por palavra ---------- */
 function initStatement() {
   const el = $('[data-statement]');
+  if (!el) return;
   // Envolve cada palavra num <span class="w">, mantendo as fotos-pílula no lugar
   [...el.childNodes].forEach((n) => {
     if (n.nodeType !== 3) return;
