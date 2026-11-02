@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/fachada-vagao-palhaco-1280.webp" imagesrcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w" imagesizes="(max-width: 820px) 60vw, 30vw" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/fachada-vagao-palhaco-1280.webp" imagesrcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w, assets/img/fachada-vagao-palhaco-1920.webp 1920w" imagesizes="(max-width: 860px) 100vw, 60vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script type="application/ld+json">
@@ -129,45 +129,31 @@
 
 <!-- ========== 1. INÍCIO ========== -->
 <section class="hero" id="inicio" aria-labelledby="hero-title">
-  <div class="hero__sun" aria-hidden="true"></div>
-  <div class="hero__grid">
-    <div class="hero__copy">
-      <p class="hero__place"><svg aria-hidden="true"><use href="#i-pin"/></svg>Buffet infantil no Barcelona, São Caetano do Sul</p>
-      <h1 class="hero__title" id="hero-title">
-        <span class="line"><span>Mais do que uma festa,</span></span>
-        <span class="line"><span>uma memória que seu filho</span></span>
-        <span class="line"><span>vai levar para a vida.</span></span>
-      </h1>
+  <div class="hero__copy">
+    <div class="hero__copy-inner">
+      <p class="hero__kicker">Buffet infantil em São Caetano do Sul</p>
+      <h1 class="hero__title" id="hero-title">Mais do que uma festa, uma memória que seu filho vai levar para a vida.</h1>
       <p class="hero__sub">Um espaço preparado para transformar momentos especiais em celebrações inesquecíveis para toda a família.</p>
       <div class="hero__ctas">
         <a class="btn" href="#orcamento">QUERO FAZER MINHA FESTA</a>
-        <a class="btn btn--outline" href="#espaco">CONHEÇA NOSSO ESPAÇO</a>
+        <a class="btn btn--light" href="#espaco">CONHEÇA NOSSO ESPAÇO</a>
       </div>
     </div>
-
-    <div class="hero__stage" aria-label="Fotos do Buffet Magic Star">
-      <figure class="arch arch--main"><img src="assets/img/fachada-vagao-palhaco-1280.webp" srcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w, assets/img/fachada-vagao-palhaco-1920.webp 1920w" sizes="(max-width: 820px) 60vw, 30vw" width="1280" height="853" fetchpriority="high" decoding="async" alt="Fachada azul e amarela do Buffet Magic Star com o palhaço e o vagão cenográfico"></figure>
-      <figure class="arch arch--b"><img src="assets/img/palco-mesa-bolo-1280.webp" srcset="assets/img/palco-mesa-bolo-640.webp 480w, assets/img/palco-mesa-bolo-1280.webp 960w" sizes="(max-width: 820px) 34vw, 16vw" width="960" height="1440" fetchpriority="high" decoding="async" alt="Palco da mesa do bolo com iluminação, globo espelhado e painel de folhagem"></figure>
-      <figure class="circle circle--c"><img src="assets/img/piscina-bolinhas-1280.webp" srcset="assets/img/piscina-bolinhas-640.webp 480w, assets/img/piscina-bolinhas-1280.webp 960w" sizes="(max-width: 820px) 28vw, 13vw" width="960" height="1440" fetchpriority="high" decoding="async" alt="Piscina de bolinhas coloridas do playground"></figure>
-      <div class="hero__sticker" aria-hidden="true"><strong>17</strong><span>brinquedos e atrações</span></div>
-      <canvas class="hero__canvas" aria-hidden="true"></canvas>
-      <div class="hero__fallback" aria-hidden="true"></div>
-    </div>
   </div>
+  <figure class="hero__photo">
+    <img src="assets/img/fachada-vagao-palhaco-1280.webp"
+         srcset="assets/img/fachada-vagao-palhaco-640.webp 640w, assets/img/fachada-vagao-palhaco-1280.webp 1280w, assets/img/fachada-vagao-palhaco-1920.webp 1920w"
+         sizes="(max-width: 860px) 100vw, 60vw" width="1920" height="1280" fetchpriority="high" decoding="async"
+         alt="Fachada azul e amarela do Buffet Magic Star, com o palhaço e o vagão no alto do prédio">
+    <figcaption>Nossa fachada na Rua Oriente, 931</figcaption>
+  </figure>
+  <ul class="hero__facts">
+    <li><span>Endereço</span><strong>Rua Oriente, 931 · Barcelona</strong><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Oriente+931+Barcelona+S%C3%A3o+Caetano+do+Sul+SP" target="_blank" rel="noopener">Como chegar</a></li>
+    <li><span>Diversão</span><strong>17 brinquedos e atrações</strong><a href="#atracoes">Ver todos</a></li>
+    <li><span>Festa completa</span><strong>Bebida, comida, bolo e decoração</strong><a href="#o-buffet">O que inclui</a></li>
+    <li><span>Atendimento</span><strong>(11) 94531-0974</strong><a href="https://wa.me/5511945310974" data-wa target="_blank" rel="noopener">Chamar no WhatsApp</a></li>
+  </ul>
 </section>
-
-<div class="ticker" aria-hidden="true">
-  <div class="ticker__track">
-    <span>17 brinquedos e atrações</span><svg><use href="#i-star"/></svg>
-    <span>Bebida, comida, bolo e decoração inclusos</span><svg><use href="#i-star"/></svg>
-    <span>Playground de vários andares</span><svg><use href="#i-star"/></svg>
-    <span>Rua Oriente, 931, Barcelona</span><svg><use href="#i-star"/></svg>
-    <span>17 brinquedos e atrações</span><svg><use href="#i-star"/></svg>
-    <span>Bebida, comida, bolo e decoração inclusos</span><svg><use href="#i-star"/></svg>
-    <span>Playground de vários andares</span><svg><use href="#i-star"/></svg>
-    <span>Rua Oriente, 931, Barcelona</span><svg><use href="#i-star"/></svg>
-  </div>
-</div>
 
 <!-- ========== 2. CONHEÇA NOSSO BUFFET ========== -->
 <section class="section about" id="o-buffet" aria-labelledby="about-title">
@@ -505,9 +491,6 @@
   <p class="lightbox__caption" data-lb-caption></p>
 </div>
 
-<script type="importmap">
-  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js" } }
-</script>
 <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

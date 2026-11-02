@@ -528,25 +528,6 @@ async function saveLead(lead) {
   } catch (e) { console.warn('Pedido não registrado no painel:', e); }
 }
 
-/* ---------- Hero 3D (com alternativa leve) ---------- */
-function initHero3D() {
-  if (reduceMotion) return;
-  const canvas = $('.hero__canvas');
-  const fallback = $('.hero__fallback');
-  const cssBalloons = () => {
-    const b = [[8, 10, 62, '#ee3b33'], [80, 4, 54, '#1c8fd6'], [88, 52, 44, '#ffd028'], [4, 60, 40, '#1c8fd6']];
-    fallback.innerHTML = b.map(([x, y, s, c], k) => `<span class="balloon" style="left:${x}%;top:${y}%;--s:${s}px;--c:${c};--d:${7 + k}s;animation-delay:-${k * 1.6}s"></span>`).join('');
-  };
-  const weak = (navigator.deviceMemory && navigator.deviceMemory < 4) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency < 4) || navigator.connection?.saveData;
-  const gl = (() => { try { return !!document.createElement('canvas').getContext('webgl2'); } catch { return false; } })();
-  if (weak || !gl) { cssBalloons(); return; }
-  const start = () => import('./hero3d.js')
-    .then((m) => m.startHero(canvas, { mobile: innerWidth < 861 }))
-    .then(() => canvas.classList.add('is-ready'))
-    .catch(() => cssBalloons());
-  'requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 1500 }) : setTimeout(start, 600);
-}
-
 applyConfig();
 initHeader();
 initReveal();
@@ -558,5 +539,4 @@ initGallery();
 initTrack();
 initFaq();
 initForm();
-initHero3D();
 runScroll();
